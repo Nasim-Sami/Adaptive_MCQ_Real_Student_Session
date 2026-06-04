@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}Episode | Dynamic Student Session Lab{% endblock %}
+
+{% block content %}
+  <section class="play-layout">
+    <aside class="panel episode-status">
+      <p class="eyebrow">Episode progress</p>
+      <div class="progress-number">{{ episode.question_number }} / {{ episode.episode_length }}</div>
+      <div class="progress-bar">
+        <span style="width: {{ (episode.question_number / episode.episode_length * 100)|round(1) }}%"></span>
+      </div>
+      <dl class="info-list compact">
+        <div>
+          <dt>Initial ability</dt>
+          <dd>{{ "%.2f"|format(episode.initial_effective_ability) }}</dd>
+        </div>
+        <div>
+          <dt>Current ability</dt>
+          <dd>{{ "%.2f"|format(episode.current_effective_ability) }}</dd>
+        </div>
+        <div>
+          <dt>Student ID</dt>
+          <dd>{{ student.student_code }}</dd>
+        </div>
+        <div>
+          <dt>Selector</dt>
+          <dd>{{ episode.algo|upper }} masked greedy</dd>
+        </div>
+      </dl>
+    </aside>
+
+    <section class="panel question-panel">
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow">{{ question.question_id }} | {{ question.topic }}</p>
+          <h1>{{ question.subtopic or "Question" }}</h1>
+        </div>
+      </div>
+
+      {% if feedback %}
+        <div class="feedback {{ 'correct' if feedback.is_correct else 'wrong' }}">
+          <strong>{{ "Correct" if feedback.is_correct else "Wrong" }}</strong>
+          <span>
+            You chose {{ feedback.chosen_option }} in {{ "%.2f"|format(feedback.time_taken) }}s.
+            Effective ability is now {{ "%.2f"|format(feedback.effective_student_ability) }}.
+          </span>
+          <small>Correct answer: {{ feedback.correct_answer }}. {{ feedback.correct_answer_text }}</small>
+        </div>
+      {% endif %}
+
+      <form class="answer-form" action="{{ url_for('answer_episode', token=episode.token) }}" method="post" data-timer-form>
+        <input type="hidden" name="elapsed_ms" value="0" data-elapsed-input>
+
+        <p class="question-text">{{ question.question }}</p>
+        <div class="option-grid">
+          {% for option in question.options %}
+            <label class="option-card" data-option-card>
+              <input type="radio" name="chosen_option" value="{{ option.key }}" required>
+              <span class="option-key">{{ option.key }}</span>
+              <span>{{ option.text }}</span>
+            </label>
+          {% endfor %}
+        </div>
+
+        <div class="question-actions">
+          <a class="ghost-link" href="{{ url_for('index') }}">Back to dashboard</a>
+          <button class="primary-button" type="submit">Submit Answer</button>
+        </div>
+      </form>
+    </section>
+
+    <aside class="panel notice-panel play-notice">
+      <p class="eyebrow">Before you play</p>
+      <div class="notice-lines">
+        {% for line in notice_lines %}
+          <p class="{% if loop.first %}notice-title{% endif %}">{{ line }}</p>
+        {% endfor %}
+      </div>
+    </aside>
+  </section>
+{% endblock %}

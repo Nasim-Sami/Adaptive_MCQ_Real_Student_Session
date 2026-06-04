@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% if not student %}
+    <section class="auth-layout">
+      <div class="auth-intro">
+        <p class="eyebrow">Real student mode</p>
+        <h1>Sign up once, then play adaptive episodes with your stored effective ability.</h1>
+        <p class="lede">
+          The trained DQN model chooses each next question. Your answer and time update effective ability after every step.
+        </p>
+      </div>
+
+      <div class="auth-grid">
+        <section class="panel auth-panel">
+          <div class="panel-heading">
+            <p class="eyebrow">New student</p>
+            <h2>Create account</h2>
+          </div>
+          <form class="stack-form" action="{{ url_for('signup') }}" method="post">
+            <label class="field">
+              <span>Name</span>
+              <input name="name" autocomplete="name" required placeholder="Enter a unique name">
+            </label>
+            <button class="primary-button" type="submit">Sign Up</button>
+          </form>
+          <p class="hint">A unique ID like 00001 will be created and saved in SQLite.</p>
+        </section>
+
+        <section class="panel auth-panel">
+          <div class="panel-heading">
+            <p class="eyebrow">Returning student</p>
+            <h2>Sign in</h2>
+          </div>
+          <form class="stack-form" action="{{ url_for('signin') }}" method="post">
+            <label class="field">
+              <span>Name</span>
+              <input name="name" autocomplete="name" required placeholder="Registered name">
+            </label>
+            <label class="field">
+              <span>Student ID</span>
+              <input name="student_code" inputmode="numeric" required placeholder="00001">
+            </label>
+            <button class="secondary-button" type="submit">Sign In</button>
+          </form>
+        </section>
+      </div>
+    </section>
+  {% else %}
+    <section class="dashboard-grid">
+      <section class="panel student-card">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Signed in</p>
+            <h1>{{ student.name }}</h1>
+          </div>
+          <span class="id-pill">{{ student.student_code }}</span>
+        </div>
+
+        <div class="metric-grid">
+          <div class="metric">
+            <span>Stored effective ability</span>
+            <strong>{{ "%.2f"|format(student.effective_ability) }}</strong>
+            <small>Next episode starts from this value</small>
+          </div>
+          <div class="metric">
+            <span>Ability range</span>
+            <strong>{{ ability_min }}-{{ ability_max }}</strong>
+            <small>Tracked by the dynamic environment</small>
+          </div>
+          <div class="metric">
+            <span>Highest achievement</span>
+            <strong>{{ student.highest_achievement or "Not yet" }}</strong>
+            <small>A+ and Golden A+ rules apply at ability 30</small>
+          </div>
+        </div>
+
+        <form action="{{ url_for('start_episode') }}" method="post">
+          <button class="primary-button wide" type="submit">Start Episode</button>
+        </form>
+      </section>
+
+      <section class="panel notice-panel">
+        <p class="eyebrow">Achievement rules</p>
+        <div class="notice-lines">
+          {% for line in notice_lines %}
+            <p class="{% if loop.first %}notice-title{% endif %}">{{ line }}</p>
+          {% endfor %}
+        </div>
+      </section>
+
+      <section class="panel deployment-card">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Model status</p>
+            <h2>{{ "Ready" if model_status.exists else "Model missing" }}</h2>
+          </div>
+          <span class="status-pill {{ 'ok' if model_status.exists else 'bad' }}">
+            {{ "found" if model_status.exists else "not found" }}
+          </span>
+        </div>
+        <dl class="info-list">
+          <div>
+            <dt>Model path</dt>
+            <dd>{{ model_status.path }}</dd>
+          </div>
+          <div>
+            <dt>Device</dt>
+            <dd>{{ model_status.device }}</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="panel history-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Saved in SQLite</p>
+            <h2>Recent episodes</h2>
+          </div>
+        </div>
+        {% if recent_episodes %}
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>When</th>
+                  <th>Start</th>
+                  <th>Final</th>
+                  <th>Correct</th>
+                  <th>Achievement</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for episode in recent_episodes %}
+                  <tr>
+                    <td><a href="{{ url_for('episode_result', episode_id=episode.id) }}">{{ episode.completed_at }}</a></td>
+                    <td>{{ "%.2f"|format(episode.initial_effective_ability) }}</td>
+                    <td>{{ "%.2f"|format(episode.final_effective_ability) }}</td>
+                    <td>{{ episode.total_correct }}/{{ episode.questions_answered }}</td>
+                    <td>{{ episode.achievement or "-" }}</td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        {% else %}
+          <p class="empty-state">No completed episodes yet.</p>
+        {% endif %}
+      </section>
+    </section>
+  {% endif %}
+{% endblock %}

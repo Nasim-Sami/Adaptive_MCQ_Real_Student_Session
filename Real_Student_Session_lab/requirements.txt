@@ -1,0 +1,5 @@
+Flask>=3.0,<4
+gunicorn>=26,<27
+numpy>=1.26,<3
+torch>=2.4,<3
+gymnasium>=1.2,<2

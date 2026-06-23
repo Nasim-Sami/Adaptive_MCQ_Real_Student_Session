@@ -2,10 +2,11 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-# Install system dependencies for building Python packages + curl for the Ollama installer
+# Install system dependencies for building Python packages + curl/zstd for the Ollama installer
 RUN apt-get update && apt-get install -y \
     build-essential \
     curl \
+    zstd \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Ollama and pre-pull the embedding model used by retriever.py,

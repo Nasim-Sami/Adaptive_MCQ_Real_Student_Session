@@ -1,3 +1,13 @@
+---
+title: Adaptive MCQ LLM LSTM RL Based
+emoji: 🧠
+colorFrom: blue
+colorTo: purple
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # LLM-Enhanced Adaptive Mechatronics — v2.4
 
 Topic-selection RL system (the agent picks a *topic*; a rule serves the

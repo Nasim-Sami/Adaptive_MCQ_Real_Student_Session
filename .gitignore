@@ -11,10 +11,6 @@ ENV/
 # Project-specific
 .env
 .env.local
-*.npy
-pdf_chunks.json
-pdf_embeddings.npy
-pdf_embeddings_meta.json
 *.pt
 *.pth
 models/
@@ -32,7 +28,10 @@ Thumbs.db
 
 # Logs & temp
 logs/
-runs/
+runs/*
+!runs/double_dqn_lstm/
+!runs/double_dqn_lstm/models/
+!runs/double_dqn_lstm/models/best_model.pt
 *.log
 Adaptive_mcq_RL-LSTM-LLM_based/
 

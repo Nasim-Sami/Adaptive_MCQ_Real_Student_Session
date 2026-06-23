@@ -12,9 +12,11 @@ RUN apt-get update && apt-get install -y \
 # Install Ollama and pre-pull the embedding model used by retriever.py,
 # so PDF-chunk retrieval works the same as it does locally.
 RUN curl -fsSL https://ollama.com/install.sh | sh
-RUN ollama serve & \
+RUN ollama serve > /tmp/ollama-build.log 2>&1 & \
+    OLLAMA_PID=$! && \
     sleep 5 && \
-    ollama pull nomic-embed-text
+    ollama pull nomic-embed-text && \
+    kill $OLLAMA_PID
 
 # Copy requirements first (for better layer caching)
 COPY requirements.txt .

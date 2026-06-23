@@ -1,0 +1,22 @@
+# Core RL / simulation stack for the topic-selection system.
+numpy==1.26.4
+torch==2.4.1
+gymnasium==1.2.3
+
+# Recurrent-PPO agent (the memory-equipped policy that infers the hidden
+# learning style / forgetting rate). RecurrentPPO + MaskablePPO live in sb3-contrib.
+stable-baselines3==2.7.1
+sb3-contrib==2.7.0
+
+# Used by the live LLM tutoring session. Not required for RL training or the
+# baseline scoreboard.
+requests
+# Generation (question gen, explanations, learning path) -> Groq cloud API,
+# free tier (see llm_client.py). Requires: export GROQ_API_KEY="gsk_..."
+# Embeddings (PDF-chunk retrieval, nomic-embed-text) still run locally via
+# Ollama (see retriever.py) - Groq has no embeddings endpoint.
+# ollama  (nomic-embed-text served locally, for retriever.py only)
+
+# Web app (app.py) - student-facing Flask UI wrapping the same RL/LLM backend.
+Flask>=3.0,<4
+gunicorn>=22,<23

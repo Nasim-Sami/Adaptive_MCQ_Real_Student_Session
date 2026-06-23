@@ -1,0 +1,53 @@
+<div class="xai-panel">
+  <div class="xai-row">
+    <div class="xai-choice">
+      <span class="xai-label">Chosen</span>
+      <strong>{{ xai.selected_topic }}</strong>
+      <span class="xai-score">{{ xai.score_kind }} = {{ "%.4f"|format(xai.selected_score) }}</span>
+      {% if not xai.was_top_ranked %}
+        <small class="xai-note">(sampled stochastically - not the top-ranked option)</small>
+      {% endif %}
+    </div>
+    <div class="xai-choice runner-up">
+      <span class="xai-label">Runner-up</span>
+      <strong>{{ xai.runner_up }}</strong>
+      <span class="xai-score">{{ xai.score_kind }} = {{ "%.4f"|format(xai.runner_up_score) }}</span>
+    </div>
+  </div>
+  <p class="xai-margin">
+    Margin: {{ "%.4f"|format(xai.margin) }}
+    ({{ "high" if xai.margin > 0.05 or xai.margin < -0.05 else "low" }} confidence)
+  </p>
+
+  <h4>Top-3 candidate topics</h4>
+  <ol class="xai-top3">
+    {% for t in xai.top3 %}
+      <li>{{ t.topic }} &mdash; {{ "%.4f"|format(t.score) }}</li>
+    {% endfor %}
+  </ol>
+
+  <h4>What drove the choice (occlusion test)</h4>
+  <ul class="xai-attribution">
+    {% for a in xai.attribution %}
+      <li class="{{ 'supports' if a.support > 0 else 'opposes' }}">
+        {{ a.label }}: {{ "%+.4f"|format(a.support) }}
+        {% if a.flips %}<span class="flip-tag">would switch to {{ a.alt_if_removed }}</span>{% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+
+  <h4>Curriculum context</h4>
+  <ul class="xai-curriculum">
+    <li>Target difficulty {{ "%.2f"|format(xai.curriculum.target_difficulty) }} (your ability: {{ "%.2f"|format(xai.curriculum.effective_ability) }})</li>
+    <li>Prerequisite readiness: {{ "%.2f"|format(xai.curriculum.observed_prereq_readiness) }}</li>
+    {% if xai.curriculum.direct_prerequisites %}
+      <li>Prerequisites: {{ xai.curriculum.direct_prerequisites|join(", ") }}</li>
+    {% endif %}
+    {% if xai.curriculum.will_boost %}
+      <li>Will boost: {% for t, w in xai.curriculum.will_boost.items() %}{{ t }} (+{{ w }}){{ ", " if not loop.last else "" }}{% endfor %}</li>
+    {% endif %}
+    {% if xai.curriculum.may_interfere %}
+      <li>May interfere with: {% for t, w in xai.curriculum.may_interfere.items() %}{{ t }} ({{ w }}){{ ", " if not loop.last else "" }}{% endfor %}</li>
+    {% endif %}
+  </ul>
+</div>

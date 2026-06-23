@@ -1,0 +1,41 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# Project-specific
+.env
+.env.local
+*.npy
+pdf_chunks.json
+pdf_embeddings.npy
+pdf_embeddings_meta.json
+*.pt
+*.pth
+models/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs & temp
+logs/
+runs/
+*.log
+Adaptive_mcq_RL-LSTM-LLM_based/
+
+# Local tooling / data
+.claude/
+data/*.db

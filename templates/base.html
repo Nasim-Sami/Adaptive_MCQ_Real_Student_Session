@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Mechatronics Adaptive MCQ Lab{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="{{ url_for('index') }}">
+          <span class="brand-mark">MS</span>
+          <span>
+            <strong>Mechatronics Adaptive MCQ Lab</strong>
+            <small>RL + LLM topic-selection episode</small>
+          </span>
+        </a>
+        {% if student %}
+          <form action="{{ url_for('logout') }}" method="post">
+            <button class="icon-button logout-button" type="submit" aria-label="Sign out" title="Sign out">
+              <span aria-hidden="true">Exit</span>
+            </button>
+          </form>
+        {% endif %}
+      </header>
+
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          <div class="flash-stack" role="status">
+            {% for category, message in messages %}
+              <div class="flash {{ category }}">{{ message }}</div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endwith %}
+
+      <main>
+        {% block content %}{% endblock %}
+      </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+  </body>
+</html>

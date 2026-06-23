@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+
+{% block title %}Episode | Mechatronics Adaptive MCQ Lab{% endblock %}
+
+{% block content %}
+  <section class="play-layout">
+    <aside class="panel episode-status">
+      <p class="eyebrow">Episode progress</p>
+      <div class="progress-number">{{ episode.question_number }} / {{ episode.episode_length }}</div>
+      <div class="progress-bar">
+        <span style="width: {{ (episode.question_number / episode.episode_length * 100)|round(1) }}%"></span>
+      </div>
+      <div class="episode-timer" data-episode-timer data-initial-seconds="{{ episode.elapsed_seconds|round(0) }}">
+        <span>Episode time</span>
+        <strong>00:00</strong>
+      </div>
+      <dl class="info-list compact">
+        <div>
+          <dt>Initial ability</dt>
+          <dd>{{ "%.2f"|format(episode.initial_effective_ability) }}</dd>
+        </div>
+        <div>
+          <dt>Current ability</dt>
+          <dd>{{ "%.2f"|format(episode.current_effective_ability) }}</dd>
+        </div>
+        <div>
+          <dt>Student ID</dt>
+          <dd>{{ student.student_code }}</dd>
+        </div>
+        <div>
+          <dt>Selector</dt>
+          <dd>{{ episode.algo|upper }}</dd>
+        </div>
+      </dl>
+    </aside>
+
+    <section class="panel question-panel">
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow">Question topic</p>
+          <h1>{{ question.topic }}</h1>
+        </div>
+        <button class="ghost-button" type="button" data-xai-button data-xai-url="{{ url_for('episode_xai', token=episode.token) }}">
+          Why this topic? (XAI)
+        </button>
+      </div>
+      <div class="xai-panel-container" data-xai-container hidden></div>
+
+      {% if feedback %}
+        <div class="feedback {{ 'correct' if feedback.is_correct else 'wrong' }}">
+          <strong>{{ "Correct" if feedback.is_correct else "Wrong" }}</strong>
+          <p class="question-text review-question">{{ question.question }}</p>
+          <div class="option-grid review-options">
+            {% for option in question.options %}
+              <div class="option-card review-card {{ 'chosen' if feedback.chosen_option == option.key else '' }} {{ 'correct-choice' if feedback.correct_answer == option.key else '' }} {{ 'wrong-choice' if feedback.chosen_option == option.key and not feedback.is_correct else '' }}">
+                <span class="option-key">{{ option.key }}</span>
+                <span>{{ option.text }}</span>
+                {% if feedback.correct_answer == option.key %}
+                  <span class="answer-tag">Right answer</span>
+                {% elif feedback.chosen_option == option.key %}
+                  <span class="answer-tag">Your choice</span>
+                {% endif %}
+              </div>
+            {% endfor %}
+          </div>
+          <span>
+            You chose {{ feedback.chosen_option }} in {{ "%.2f"|format(feedback.time_taken) }}s.
+            Effective ability is now {{ "%.2f"|format(feedback.effective_student_ability) }}.
+          </span>
+          <small>Topic: {{ feedback.topic }} | Time ratio: {{ "%.3f"|format(feedback.time_ratio) }}</small>
+          <small>Correct answer: {{ feedback.correct_answer }}. {{ feedback.correct_answer_text }}</small>
+          <p class="feedback-explanation"><strong>Explanation:</strong> {{ feedback.explanation }}</p>
+          <form action="{{ url_for('next_question', token=episode.token) }}" method="post">
+            <button class="primary-button" type="submit">Next Question</button>
+          </form>
+        </div>
+
+      {% else %}
+        <form class="answer-form" action="{{ url_for('answer_episode', token=episode.token) }}" method="post" data-timer-form>
+          <input type="hidden" name="elapsed_ms" value="0" data-elapsed-input>
+
+          <p class="question-text">{{ question.question }}</p>
+          <div class="option-grid">
+            {% for option in question.options %}
+              <label class="option-card" data-option-card>
+                <input type="radio" name="chosen_option" value="{{ option.key }}" required>
+                <span class="option-key">{{ option.key }}</span>
+                <span>{{ option.text }}</span>
+              </label>
+            {% endfor %}
+          </div>
+
+          <div class="question-actions">
+            <a class="ghost-link" href="{{ url_for('index') }}">Back to dashboard</a>
+            <button class="primary-button" type="submit">Submit Answer</button>
+          </div>
+        </form>
+      {% endif %}
+    </section>
+
+    <aside class="panel notice-panel play-notice">
+      <div class="panel-heading compact-heading">
+        <div>
+          <p class="eyebrow">Achievement ladder</p>
+          <h2>{{ current_status_info.next_goal }}</h2>
+        </div>
+      </div>
+      <div class="career-table-wrap compact-career">
+        <table class="career-table">
+          <tbody>
+            {% for goal in achievement_levels %}
+              <tr>
+                <td><strong>{{ goal.level }}</strong></td>
+                <td>{{ goal.requirement }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </aside>
+  </section>
+{% endblock %}

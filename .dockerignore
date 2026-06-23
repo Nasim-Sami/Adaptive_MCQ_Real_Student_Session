@@ -1,0 +1,15 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+.env
+.env.local
+.DS_Store
+*.log
+.git
+.gitignore
+*.md
+real_student_sessions
+runs_*.log
+.claude

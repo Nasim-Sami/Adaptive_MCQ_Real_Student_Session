@@ -5,11 +5,11 @@
     <section class="auth-layout">
       <div class="auth-intro">
         <p class="eyebrow">Real student mode</p>
-        <h1>Sign up once, then play adaptive episodes with your stored effective ability.</h1>
+        <h1>Sign up once, then play adaptive episodes with your stored effective skill.</h1>
         <p class="lede">
           A memory-equipped RL agent picks the next mechatronics topic; a gap-based rule
           serves a bank or LLM-generated question within that topic. Your answer and time
-          update your effective ability after every step.
+          update your effective skill after every step.
         </p>
       </div>
 
@@ -27,7 +27,7 @@
             <button class="primary-button" type="submit">Sign Up</button>
           </form>
           <p class="hint">A unique ID like 00001 will be created and saved.</p>
-          <p class="hint">New students start from a random effective ability in [{{ "%.0f"|format(ability_min) }}, {{ "%.0f"|format(ability_max) }}] range.</p>
+          <p class="hint">New students start from a random effective skill in [{{ "%.0f"|format(ability_min) }}, {{ "%.0f"|format(ability_max) }}] range.</p>
         </section>
 
         <section class="panel auth-panel">
@@ -62,12 +62,12 @@
 
         <div class="metric-grid">
           <div class="metric">
-            <span>Stored effective ability</span>
+            <span>Stored effective skill</span>
             <strong>{{ "%.2f"|format(student.effective_ability) }}</strong>
             <small>Next episode starts from this value</small>
           </div>
           <div class="metric">
-            <span>Ability range</span>
+            <span>Skill range</span>
             <strong>{{ ability_min }}-{{ ability_max }}</strong>
             <small>Tracked by the adaptive environment</small>
           </div>

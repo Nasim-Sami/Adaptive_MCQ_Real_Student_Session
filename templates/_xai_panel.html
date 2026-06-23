@@ -38,7 +38,7 @@
 
   <h4>Curriculum context</h4>
   <ul class="xai-curriculum">
-    <li>Target difficulty {{ "%.2f"|format(xai.curriculum.target_difficulty) }} (your ability: {{ "%.2f"|format(xai.curriculum.effective_ability) }})</li>
+    <li>Target difficulty {{ "%.2f"|format(xai.curriculum.target_difficulty) }} (your skill: {{ "%.2f"|format(xai.curriculum.effective_ability) }})</li>
     <li>Prerequisite readiness: {{ "%.2f"|format(xai.curriculum.observed_prereq_readiness) }}</li>
     {% if xai.curriculum.direct_prerequisites %}
       <li>Prerequisites: {{ xai.curriculum.direct_prerequisites|join(", ") }}</li>

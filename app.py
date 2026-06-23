@@ -90,19 +90,19 @@ DATABASE_PATH = default_database_path()
 # Achievement ladder (de-branded, rescaled to the 10-50 ability range)
 # ---------------------------------------------------------------------------
 ACHIEVEMENT_LEVELS = [
-    {"level": "A", "requirement": "Finish an episode with effective ability >= 42.",
+    {"level": "A", "requirement": "Finish an episode with effective skill >= 42.",
      "result": "Great job! You achieved A."},
-    {"level": "A+", "requirement": "Finish an episode with effective ability >= 44.",
+    {"level": "A+", "requirement": "Finish an episode with effective skill >= 44.",
      "result": "Excellent! You achieved A+."},
-    {"level": "Golden A+", "requirement": "Finish an episode with effective ability >= 46.",
+    {"level": "Golden A+", "requirement": "Finish an episode with effective skill >= 46.",
      "result": "Outstanding! You achieved Golden A+."},
-    {"level": "Top-tier interview", "requirement": "Finish an episode with effective ability >= 48.",
+    {"level": "Top-tier interview", "requirement": "Finish an episode with effective skill >= 48.",
      "result": "Selected for a top-tier engineering interview."},
-    {"level": "Hired", "requirement": "After interview selection, play again and finish at ability 50.",
+    {"level": "Hired", "requirement": "After interview selection, play again and finish at skill 50.",
      "result": "Hired as a Mechatronics Engineer."},
-    {"level": "Senior engineer", "requirement": "After getting hired, play again and finish at ability 50.",
+    {"level": "Senior engineer", "requirement": "After getting hired, play again and finish at skill 50.",
      "result": "Promoted to Senior Mechatronics Engineer."},
-    {"level": "Head of department", "requirement": "After promotion, play again, finish at ability 50, and answer every question correctly.",
+    {"level": "Head of department", "requirement": "After promotion, play again, finish at skill 50, and answer every question correctly.",
      "result": "Head of the Mechatronics Engineering Department."},
 ]
 
@@ -134,13 +134,13 @@ ACHIEVEMENT_CELEBRATION = {
 }
 
 NEXT_GOAL_MESSAGES = {
-    "": "Reach ability 42 to achieve A.",
-    "A": "Reach ability 44 to achieve A+.",
-    "A+": "Reach ability 46 to achieve Golden A+.",
-    "Golden A+": "Reach ability 48 to get selected for a top-tier interview.",
-    "Selected for interview": "Play again and finish at ability 50 to get hired as a Mechatronics Engineer.",
-    "Hired as Mechatronics Engineer": "Play again and finish at ability 50 to get promoted.",
-    "Senior Mechatronics Engineer": "Play again, finish at ability 50, and answer every question correctly to become Head of Department.",
+    "": "Reach skill 42 to achieve A.",
+    "A": "Reach skill 44 to achieve A+.",
+    "A+": "Reach skill 46 to achieve Golden A+.",
+    "Golden A+": "Reach skill 48 to get selected for a top-tier interview.",
+    "Selected for interview": "Play again and finish at skill 50 to get hired as a Mechatronics Engineer.",
+    "Hired as Mechatronics Engineer": "Play again and finish at skill 50 to get promoted.",
+    "Senior Mechatronics Engineer": "Play again, finish at skill 50, and answer every question correctly to become Head of Department.",
     "Head of Mechatronics Engineering Department": "You reached the highest level in this simulator.",
 }
 

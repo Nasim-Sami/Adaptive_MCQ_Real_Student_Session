@@ -16,11 +16,11 @@
       </div>
       <dl class="info-list compact">
         <div>
-          <dt>Initial ability</dt>
+          <dt>Initial skill</dt>
           <dd>{{ "%.2f"|format(episode.initial_effective_ability) }}</dd>
         </div>
         <div>
-          <dt>Current ability</dt>
+          <dt>Current skill</dt>
           <dd>{{ "%.2f"|format(episode.current_effective_ability) }}</dd>
         </div>
         <div>
@@ -65,7 +65,7 @@
           </div>
           <span>
             You chose {{ feedback.chosen_option }} in {{ "%.2f"|format(feedback.time_taken) }}s.
-            Effective ability is now {{ "%.2f"|format(feedback.effective_student_ability) }}.
+            Effective skill is now {{ "%.2f"|format(feedback.effective_student_ability) }}.
           </span>
           <small>Topic: {{ feedback.topic }} | Time ratio: {{ "%.3f"|format(feedback.time_ratio) }}</small>
           <small>Correct answer: {{ feedback.correct_answer }}. {{ feedback.correct_answer_text }}</small>

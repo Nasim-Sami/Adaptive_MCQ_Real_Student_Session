@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% block title %}Episode Result | Dynamic Student Session Lab{% endblock %}
+
+{% block content %}
+  <section class="result-layout">
+    <section class="panel result-summary">
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow">Episode complete</p>
+          <h1>{{ student.name }}</h1>
+        </div>
+        <span class="id-pill">{{ student.student_code }}</span>
+      </div>
+
+      {% if episode.achievement %}
+        <div class="achievement-banner {{ 'golden' if episode.achievement == 'Golden A+' else 'standard' }}">
+          {{ episode.achievement }}
+        </div>
+      {% endif %}
+
+      <div class="metric-grid">
+        <div class="metric">
+          <span>Initial effective ability</span>
+          <strong>{{ "%.2f"|format(episode.initial_effective_ability) }}</strong>
+        </div>
+        <div class="metric">
+          <span>Final effective ability</span>
+          <strong>{{ "%.2f"|format(episode.final_effective_ability) }}</strong>
+        </div>
+        <div class="metric">
+          <span>Correct answers</span>
+          <strong>{{ episode.total_correct }}/{{ episode.questions_answered }}</strong>
+          <small>{{ "%.0f"|format(episode.accuracy * 100) }}% accuracy</small>
+        </div>
+        <div class="metric">
+          <span>Total time</span>
+          <strong>{{ "%.2f"|format(episode.total_time_taken) }}s</strong>
+        </div>
+      </div>
+
+      <form action="{{ url_for('start_episode') }}" method="post">
+        <button class="primary-button wide" type="submit">Play Again</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow">Adaptive report</p>
+          <h2>Learning path</h2>
+        </div>
+      </div>
+      {% if episode.suggested_learning_path %}
+        <ol class="learning-list">
+          {% for item in episode.suggested_learning_path %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ol>
+      {% else %}
+        <p class="empty-state">No learning path was generated.</p>
+      {% endif %}
+    </section>
+
+    <section class="panel answers-panel">
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow">Question by question</p>
+          <h2>Episode answers</h2>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Question</th>
+              <th>Chosen</th>
+              <th>Correct</th>
+              <th>Time</th>
+              <th>Ability</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for answer in answers %}
+              <tr>
+                <td>{{ answer.step }}</td>
+                <td>
+                  <strong>{{ answer.question_id }}</strong>
+                  <span>{{ answer.question }}</span>
+                  <small>{{ answer.topic }}</small>
+                </td>
+                <td>{{ answer.chosen_option }}</td>
+                <td>
+                  <span class="status-pill {{ 'ok' if answer.is_correct else 'bad' }}">
+                    {{ "Yes" if answer.is_correct else "No" }}
+                  </span>
+                  <small>{{ answer.correct_answer }}</small>
+                </td>
+                <td>{{ "%.2f"|format(answer.time_taken) }}s</td>
+                <td>
+                  {{ "%.2f"|format(answer.effective_ability_before) }}
+                  to
+                  {{ "%.2f"|format(answer.effective_ability_after) }}
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </section>
+{% endblock %}

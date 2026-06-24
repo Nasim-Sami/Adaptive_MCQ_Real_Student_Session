@@ -1,0 +1,21 @@
+step,selected_topic,question_id,source,target_difficulty,chosen_difficulty,gap_ok,was_repeat,is_correct,time_taken,time_ratio,effective_ability_before,effective_ability_after,running_accuracy,explanation
+0,Sensor errors and calibration,T13Q11,bank,8.497,2.3,False,False,True,9.84,0.4,44.0787,44.13910569187305,1.0,Dead band is an insensitive region where input changes produce negligible output changes.
+1,Filtering,T14Q8,bank,9.157,9.2,True,False,False,3.3,0.05,44.1391,42.728263679840495,0.5,Band-pass combines high-pass (f > f_low) and low-pass (f < f_high) actions to select a frequency window.
+2,Operational amplifier signal conditioning,T15Q2,bank,8.707,5.4,False,False,True,4.34,0.118,42.7283,43.18682297973174,0.6667,"An inverting summing amplifier outputs -(Rf/R1 V1 + Rf/R2 V2 + ...), a weighted sum of inputs."
+3,Control systems,T08Q8,bank,9.466,9.2,True,False,False,3.7,0.057,43.1868,41.872876275584254,0.5,Transient response describes how system reaches steady state.
+4,Control systems,T08Q7,bank,9.016,8.5,True,False,False,3.22,0.058,41.8729,40.18640807356486,0.4,Sensors measure actual system output for feedback.
+5,Filtering,T14Q6,bank,8.116,7.9,True,False,False,3.96,0.078,40.1864,38.21114810257597,0.3333,-3dB corresponds to 10 log(0.5) = -3.01 dB; output power is half at this frequency.
+6,Filtering,T14Q4,bank,6.916,6.7,True,False,False,16.26,0.375,38.2111,35.7405498657147,0.2857,Butterworth gives a maximally flat passband at the cost of a less steep transition; Chebyshev trades passband ripple for sharper roll-off.
+7,Filtering,T14Q3,bank,5.716,6.0,True,False,False,5.1,0.13,35.7405,32.9685948496456,0.25,"Aliasing must be prevented before sampling, so an analog low-pass filter removes content above the Nyquist frequency ahead of the ADC."
+8,Strain gauges,T12Q15,bank,4.516,4.8,True,False,False,2.74,0.077,32.9686,29.924108688083813,0.2222,Active gauge responds to strain; dummy responds to temperature only. Combined output cancels thermal error and doubles sensitivity.
+9,Strain gauges,T12Q13,bank,3.316,3.5,True,False,False,1.37,0.045,29.9241,26.62877756291962,0.2,At large strains the material deviates from linear R-strain relationship; plastic deformation and material change occur.
+10,Strain gauges,T12Q11,bank,2.116,2.3,True,False,False,1.27,0.052,26.6288,23.18160604312848,0.1818,"Over time, adhesive molecules relax slightly, causing apparent strain drift even though actual strain is constant."
+11,Temperature sensors,T11Q1,bank,1.0,1.0,True,False,False,1.08,0.057,23.1816,19.592344615326493,0.1667,Unequal expansion of the bonded metals causes the strip to curve as temperature changes.
+12,Temperature sensors,T11Q10,bank,1.0,1.6,True,False,False,0.91,0.042,19.5923,16.43529236629478,0.1538,"Type-K (Chromel/Alumel) has ~41 µV/°C sensitivity, making it a popular general-purpose thermocouple."
+13,Temperature sensors,T11Q11,bank,1.0,2.3,False,False,False,1.67,0.067,16.4353,13.912673367776412,0.1429,Thermal time constant depends on sensor mass and thermal conductance between it and the medium.
+14,Position and displacement sensors,T10Q1,bank,1.0,1.0,True,False,False,1.61,0.09,13.9127,12.040704733346443,0.1333,The wiper voltage of a rotary potentiometer is proportional to shaft angle.
+15,Measurement systems,T09Q1,bank,1.0,1.0,True,False,False,1.01,0.054,12.0407,11.127222065291422,0.125,"A measurement system has a sensing element, a signal-conditioning/processing element and a data presentation element."
+16,Measurement systems,T09Q10,bank,1.0,1.6,True,False,False,1.09,0.049,11.1272,10.695435889137125,0.1176,Reproducibility (precision) is consistency of repeated measurements of the same quantity.
+17,Measurement systems,T09Q11,bank,1.0,2.3,False,False,False,2.9,0.119,10.6954,10.472282710150491,0.1111,A consistent offset suggests a systematic error that affects all readings identically and can be corrected.
+18,Position and displacement sensors,T10Q10,bank,1.0,1.6,True,False,False,0.97,0.044,10.4723,10.296751508196683,0.1053,"C = ε₀A/d shows C ∝ 1/d, so equal displacement changes produce unequal capacitance changes."
+19,Position and displacement sensors,T10Q11,bank,1.0,2.3,False,False,False,0.93,0.037,10.2968,10.202943119857995,0.1,Incremental encoders track changes (delta position); absolute encoders directly encode position at each spot.

@@ -1,0 +1,108 @@
+{
+  "alice": {
+    "play_count": 3,
+    "effective_ability": 44.0787,
+    "asked_question_ids": [
+      "T13Q7",
+      "LLM_Sensor_errors_and_ca_093",
+      "T14Q7",
+      "T10Q9",
+      "T15Q3",
+      "T10Q8",
+      "LLM_Operational_amplifie_084",
+      "T13Q3",
+      "T13Q5",
+      "T13Q4",
+      "T09Q7",
+      "T15Q9",
+      "T13Q9",
+      "T15Q7",
+      "LLM_Operational_amplifie_096",
+      "LLM_Operational_amplifie_086",
+      "LLM_Operational_amplifie_098",
+      "T15Q4",
+      "T10Q4",
+      "T10Q7",
+      "T13Q8",
+      "T13Q2",
+      "T16Q5",
+      "LLM_Operational_amplifie_094",
+      "T13Q13",
+      "T10Q6",
+      "T13Q14",
+      "T10Q3",
+      "T15Q8",
+      "T08Q4",
+      "T10Q15",
+      "T10Q2",
+      "T10Q5",
+      "T13Q6",
+      "T09Q8",
+      "T15Q5",
+      "T15Q6",
+      "T13Q15",
+      "T13Q12",
+      "T09Q3"
+    ],
+    "topic_stats": {
+      "Control systems": {
+        "asked": 1,
+        "correct": 1,
+        "wrong": 0
+      },
+      "Measurement systems": {
+        "asked": 3,
+        "correct": 3,
+        "wrong": 0
+      },
+      "Position and displacement sensors": {
+        "asked": 9,
+        "correct": 7,
+        "wrong": 2
+      },
+      "Sensor errors and calibration": {
+        "asked": 13,
+        "correct": 8,
+        "wrong": 5
+      },
+      "Filtering": {
+        "asked": 1,
+        "correct": 1,
+        "wrong": 0
+      },
+      "Operational amplifier signal conditioning": {
+        "asked": 12,
+        "correct": 8,
+        "wrong": 4
+      },
+      "Analog-to-digital conversion": {
+        "asked": 1,
+        "correct": 1,
+        "wrong": 0
+      }
+    }
+  },
+  "finaltest": {
+    "play_count": 1,
+    "effective_ability": 33.1597,
+    "asked_question_ids": [
+      "T09Q2",
+      "T09Q3",
+      "T09Q15",
+      "T15Q5",
+      "T15Q3"
+    ],
+    "topic_stats": {
+      "Measurement systems": {
+        "asked": 3,
+        "correct": 2,
+        "wrong": 1
+      },
+      "Operational amplifier signal conditioning": {
+        "asked": 2,
+        "correct": 1,
+        "wrong": 1
+      }
+    }
+  }
+}

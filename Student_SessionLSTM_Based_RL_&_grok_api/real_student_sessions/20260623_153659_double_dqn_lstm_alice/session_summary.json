@@ -1,0 +1,696 @@
+{
+  "summary": {
+    "student_id": "alice",
+    "play_count": 4,
+    "llm_routing": "gap_based",
+    "n_llm_actual": 0,
+    "n_bank_actual": 20,
+    "model": "runs/double_dqn_lstm/models/best_model.pt",
+    "algo": "double_dqn_lstm",
+    "n_questions": 20,
+    "initial_effective_ability": 44.079,
+    "final_effective_ability": 10.203,
+    "accuracy": 0.1,
+    "unique_questions": 20,
+    "repeated_questions": 0,
+    "topics_touched": [
+      "Control systems",
+      "Filtering",
+      "Measurement systems",
+      "Operational amplifier signal conditioning",
+      "Position and displacement sensors",
+      "Sensor errors and calibration",
+      "Strain gauges",
+      "Temperature sensors"
+    ],
+    "suggested_learning_path": [
+      "Measurement systems",
+      "Control systems",
+      "Position and displacement sensors",
+      "Temperature sensors",
+      "Strain gauges",
+      "Sensor errors and calibration",
+      "Filtering",
+      "Operational amplifier signal conditioning"
+    ]
+  },
+  "topic_report": {
+    "Sensors and transducers": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Basic electronics": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Operational amplifiers": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Open-loop and closed-loop control": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Number systems and digital coding": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Sensor characteristics and performance": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Logic gates and Boolean algebra": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Signal conditioning": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Control systems": {
+      "correct": 1,
+      "wrong": 2,
+      "attempts": 3,
+      "accuracy": 0.3333333333333333,
+      "status": "needs_improvement"
+    },
+    "Measurement systems": {
+      "correct": 3,
+      "wrong": 3,
+      "attempts": 6,
+      "accuracy": 0.5,
+      "status": "needs_improvement"
+    },
+    "Position and displacement sensors": {
+      "correct": 7,
+      "wrong": 5,
+      "attempts": 12,
+      "accuracy": 0.5833333333333334,
+      "status": "developing"
+    },
+    "Temperature sensors": {
+      "correct": 0,
+      "wrong": 3,
+      "attempts": 3,
+      "accuracy": 0.0,
+      "status": "needs_improvement"
+    },
+    "Strain gauges": {
+      "correct": 0,
+      "wrong": 3,
+      "attempts": 3,
+      "accuracy": 0.0,
+      "status": "needs_improvement"
+    },
+    "Sensor errors and calibration": {
+      "correct": 9,
+      "wrong": 5,
+      "attempts": 14,
+      "accuracy": 0.6428571428571429,
+      "status": "developing"
+    },
+    "Filtering": {
+      "correct": 1,
+      "wrong": 4,
+      "attempts": 5,
+      "accuracy": 0.2,
+      "status": "needs_improvement"
+    },
+    "Operational amplifier signal conditioning": {
+      "correct": 9,
+      "wrong": 4,
+      "attempts": 13,
+      "accuracy": 0.6923076923076923,
+      "status": "developing"
+    },
+    "Analog-to-digital conversion": {
+      "correct": 1,
+      "wrong": 0,
+      "attempts": 1,
+      "accuracy": 1.0,
+      "status": "developing"
+    },
+    "Flip-flops and registers": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "System transfer functions": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Block diagram and signal flow": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Optical encoders": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Velocity and acceleration sensors": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Thermocouples": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Light and proximity sensors": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Data acquisition systems": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Digital input-output interfacing": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Counters and timers": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Microprocessor architecture": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Dynamic system response": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Frequency response": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Microcontroller interfacing": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Electrical actuation": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Hydraulic actuation": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Pneumatic actuation": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Stepper and servo drives": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Controllers": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Closed-loop dynamic response": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "PID control": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Closed-loop stability": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Programmable logic controllers": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Digital control": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Sequential and process control": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Fault diagnosis and safety logic": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Mechatronic system design": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Mechatronic system integration": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    }
+  },
+  "rows": [
+    {
+      "step": 0,
+      "selected_topic": "Sensor errors and calibration",
+      "question_id": "T13Q11",
+      "source": "bank",
+      "target_difficulty": 8.497,
+      "chosen_difficulty": 2.3,
+      "gap_ok": false,
+      "was_repeat": false,
+      "is_correct": true,
+      "time_taken": 9.84,
+      "time_ratio": 0.4,
+      "effective_ability_before": 44.0787,
+      "effective_ability_after": 44.13910569187305,
+      "running_accuracy": 1.0,
+      "explanation": "Dead band is an insensitive region where input changes produce negligible output changes."
+    },
+    {
+      "step": 1,
+      "selected_topic": "Filtering",
+      "question_id": "T14Q8",
+      "source": "bank",
+      "target_difficulty": 9.157,
+      "chosen_difficulty": 9.2,
+      "gap_ok": true,
+      "was_repeat": false,
+      "is_correct": false,
+      "time_taken": 3.3,
+      "time_ratio": 0.05,
+      "effective_ability_before": 44.1391,
+      "effective_ability_after": 42.728263679840495,
+      "running_accuracy": 0.5,
+      "explanation": "Band-pass combines high-pass (f > f_low) and low-pass (f < f_high) actions to select a frequency window."
+    },
+    {
+      "step": 2,
+      "selected_topic": "Operational amplifier signal conditioning",
+      "question_id": "T15Q2",
+      "source": "bank",
+      "target_difficulty": 8.707,
+      "chosen_difficulty": 5.4,
+      "gap_ok": false,
+      "was_repeat": false,
+      "is_correct": true,
+      "time_taken": 4.34,
+      "time_ratio": 0.118,
+      "effective_ability_before": 42.7283,
+      "effective_ability_after": 43.18682297973174,
+      "running_accuracy": 0.6667,
+      "explanation": "An inverting summing amplifier outputs -(Rf/R1 V1 + Rf/R2 V2 + ...), a weighted sum of inputs."
+    },
+    {
+      "step": 3,
+      "selected_topic": "Control systems",
+      "question_id": "T08Q8",
+      "source": "bank",
+      "target_difficulty": 9.466,
+      "chosen_difficulty": 9.2,
+      "gap_ok": true,
+      "was_repeat": false,
+      "is_correct": false,
+      "time_taken": 3.7,
+      "time_ratio": 0.057,
+      "effective_ability_before": 43.1868,
+      "effective_ability_after": 41.872876275584254,
+      "running_accuracy": 0.5,
+      "explanation": "Transient response describes how system reaches steady state."
+    },
+    {
+      "step": 4,
+      "selected_topic": "Control systems",
+      "question_id": "T08Q7",
+      "source": "bank",
+      "target_difficulty": 9.016,
+      "chosen_difficulty": 8.5,
+      "gap_ok": true,
+      "was_repeat": false,
+      "is_correct": false,
+      "time_taken": 3.22,
+      "time_ratio": 0.058,
+      "effective_ability_before": 41.8729,
+      "effective_ability_after": 40.18640807356486,
+      "running_accuracy": 0.4,
+      "explanation": "Sensors measure actual system output for feedback."
+    },
+    {
+      "step": 5,
+      "selected_topic": "Filtering",
+      "question_id": "T14Q6",
+      "source": "bank",
+      "target_difficulty": 8.116,
+      "chosen_difficulty": 7.9,
+      "gap_ok": true,
+      "was_repeat": false,
+      "is_correct": false,
+      "time_taken": 3.96,
+      "time_ratio": 0.078,
+      "effective_ability_before": 40.1864,
+      "effective_ability_after": 38.21114810257597,
+      "running_accuracy": 0.3333,
+      "explanation": "-3dB corresponds to 10 log(0.5) = -3.01 dB; output power is half at this frequency."
+    },
+    {
+      "step": 6,
+      "selected_topic": "Filtering",
+      "question_id": "T14Q4",
+      "source": "bank",
+      "target_difficulty": 6.916,
+      "chosen_difficulty": 6.7,
+      "gap_ok": true,
+      "was_repeat": false,
+      "is_correct": false,
+      "time_taken": 16.26,
+      "time_ratio": 0.375,
+      "effective_ability_before": 38.2111,
+      "effective_ability_after": 35.7405498657147,
+      "running_accuracy": 0.2857,
+      "explanation": "Butterworth gives a maximally flat passband at the cost of a less steep transition; Chebyshev trades passband ripple for sharper roll-off."
+    },
+    {
+      "step": 7,
+      "selected_topic": "Filtering",
+      "question_id": "T14Q3",
+      "source": "bank",
+      "target_difficulty": 5.716,
+      "chosen_difficulty": 6.0,
+      "gap_ok": true,
+      "was_repeat": false,
+      "is_correct": false,
+      "time_taken": 5.1,
+      "time_ratio": 0.13,
+      "effective_ability_before": 35.7405,
+      "effective_ability_after": 32.9685948496456,
+      "running_accuracy": 0.25,
+      "explanation": "Aliasing must be prevented before sampling, so an analog low-pass filter removes content above the Nyquist frequency ahead of the ADC."
+    },
+    {
+      "step": 8,
+      "selected_topic": "Strain gauges",
+      "question_id": "T12Q15",
+      "source": "bank",
+      "target_difficulty": 4.516,
+      "chosen_difficulty": 4.8,
+      "gap_ok": true,
+      "was_repeat": false,
+      "is_correct": false,
+      "time_taken": 2.74,
+      "time_ratio": 0.077,
+      "effective_ability_before": 32.9686,
+      "effective_ability_after": 29.924108688083813,
+      "running_accuracy": 0.2222,
+      "explanation": "Active gauge responds to strain; dummy responds to temperature only. Combined output cancels thermal error and doubles sensitivity."
+    },
+    {
+      "step": 9,
+      "selected_topic": "Strain gauges",
+      "question_id": "T12Q13",
+      "source": "bank",
+      "target_difficulty": 3.316,
+      "chosen_difficulty": 3.5,
+      "gap_ok": true,
+      "was_repeat": false,
+      "is_correct": false,
+      "time_taken": 1.37,
+      "time_ratio": 0.045,
+      "effective_ability_before": 29.9241,
+      "effective_ability_after": 26.62877756291962,
+      "running_accuracy": 0.2,
+      "explanation": "At large strains the material deviates from linear R-strain relationship; plastic deformation and material change occur."
+    },
+    {
+      "step": 10,
+      "selected_topic": "Strain gauges",
+      "question_id": "T12Q11",
+      "source": "bank",
+      "target_difficulty": 2.116,
+      "chosen_difficulty": 2.3,
+      "gap_ok": true,
+      "was_repeat": false,
+      "is_correct": false,
+      "time_taken": 1.27,
+      "time_ratio": 0.052,
+      "effective_ability_before": 26.6288,
+      "effective_ability_after": 23.18160604312848,
+      "running_accuracy": 0.1818,
+      "explanation": "Over time, adhesive molecules relax slightly, causing apparent strain drift even though actual strain is constant."
+    },
+    {
+      "step": 11,
+      "selected_topic": "Temperature sensors",
+      "question_id": "T11Q1",
+      "source": "bank",
+      "target_difficulty": 1.0,
+      "chosen_difficulty": 1.0,
+      "gap_ok": true,
+      "was_repeat": false,
+      "is_correct": false,
+      "time_taken": 1.08,
+      "time_ratio": 0.057,
+      "effective_ability_before": 23.1816,
+      "effective_ability_after": 19.592344615326493,
+      "running_accuracy": 0.1667,
+      "explanation": "Unequal expansion of the bonded metals causes the strip to curve as temperature changes."
+    },
+    {
+      "step": 12,
+      "selected_topic": "Temperature sensors",
+      "question_id": "T11Q10",
+      "source": "bank",
+      "target_difficulty": 1.0,
+      "chosen_difficulty": 1.6,
+      "gap_ok": true,
+      "was_repeat": false,
+      "is_correct": false,
+      "time_taken": 0.91,
+      "time_ratio": 0.042,
+      "effective_ability_before": 19.5923,
+      "effective_ability_after": 16.43529236629478,
+      "running_accuracy": 0.1538,
+      "explanation": "Type-K (Chromel/Alumel) has ~41 \u00b5V/\u00b0C sensitivity, making it a popular general-purpose thermocouple."
+    },
+    {
+      "step": 13,
+      "selected_topic": "Temperature sensors",
+      "question_id": "T11Q11",
+      "source": "bank",
+      "target_difficulty": 1.0,
+      "chosen_difficulty": 2.3,
+      "gap_ok": false,
+      "was_repeat": false,
+      "is_correct": false,
+      "time_taken": 1.67,
+      "time_ratio": 0.067,
+      "effective_ability_before": 16.4353,
+      "effective_ability_after": 13.912673367776412,
+      "running_accuracy": 0.1429,
+      "explanation": "Thermal time constant depends on sensor mass and thermal conductance between it and the medium."
+    },
+    {
+      "step": 14,
+      "selected_topic": "Position and displacement sensors",
+      "question_id": "T10Q1",
+      "source": "bank",
+      "target_difficulty": 1.0,
+      "chosen_difficulty": 1.0,
+      "gap_ok": true,
+      "was_repeat": false,
+      "is_correct": false,
+      "time_taken": 1.61,
+      "time_ratio": 0.09,
+      "effective_ability_before": 13.9127,
+      "effective_ability_after": 12.040704733346443,
+      "running_accuracy": 0.1333,
+      "explanation": "The wiper voltage of a rotary potentiometer is proportional to shaft angle."
+    },
+    {
+      "step": 15,
+      "selected_topic": "Measurement systems",
+      "question_id": "T09Q1",
+      "source": "bank",
+      "target_difficulty": 1.0,
+      "chosen_difficulty": 1.0,
+      "gap_ok": true,
+      "was_repeat": false,
+      "is_correct": false,
+      "time_taken": 1.01,
+      "time_ratio": 0.054,
+      "effective_ability_before": 12.0407,
+      "effective_ability_after": 11.127222065291422,
+      "running_accuracy": 0.125,
+      "explanation": "A measurement system has a sensing element, a signal-conditioning/processing element and a data presentation element."
+    },
+    {
+      "step": 16,
+      "selected_topic": "Measurement systems",
+      "question_id": "T09Q10",
+      "source": "bank",
+      "target_difficulty": 1.0,
+      "chosen_difficulty": 1.6,
+      "gap_ok": true,
+      "was_repeat": false,
+      "is_correct": false,
+      "time_taken": 1.09,
+      "time_ratio": 0.049,
+      "effective_ability_before": 11.1272,
+      "effective_ability_after": 10.695435889137125,
+      "running_accuracy": 0.1176,
+      "explanation": "Reproducibility (precision) is consistency of repeated measurements of the same quantity."
+    },
+    {
+      "step": 17,
+      "selected_topic": "Measurement systems",
+      "question_id": "T09Q11",
+      "source": "bank",
+      "target_difficulty": 1.0,
+      "chosen_difficulty": 2.3,
+      "gap_ok": false,
+      "was_repeat": false,
+      "is_correct": false,
+      "time_taken": 2.9,
+      "time_ratio": 0.119,
+      "effective_ability_before": 10.6954,
+      "effective_ability_after": 10.472282710150491,
+      "running_accuracy": 0.1111,
+      "explanation": "A consistent offset suggests a systematic error that affects all readings identically and can be corrected."
+    },
+    {
+      "step": 18,
+      "selected_topic": "Position and displacement sensors",
+      "question_id": "T10Q10",
+      "source": "bank",
+      "target_difficulty": 1.0,
+      "chosen_difficulty": 1.6,
+      "gap_ok": true,
+      "was_repeat": false,
+      "is_correct": false,
+      "time_taken": 0.97,
+      "time_ratio": 0.044,
+      "effective_ability_before": 10.4723,
+      "effective_ability_after": 10.296751508196683,
+      "running_accuracy": 0.1053,
+      "explanation": "C = \u03b5\u2080A/d shows C \u221d 1/d, so equal displacement changes produce unequal capacitance changes."
+    },
+    {
+      "step": 19,
+      "selected_topic": "Position and displacement sensors",
+      "question_id": "T10Q11",
+      "source": "bank",
+      "target_difficulty": 1.0,
+      "chosen_difficulty": 2.3,
+      "gap_ok": false,
+      "was_repeat": false,
+      "is_correct": false,
+      "time_taken": 0.93,
+      "time_ratio": 0.037,
+      "effective_ability_before": 10.2968,
+      "effective_ability_after": 10.202943119857995,
+      "running_accuracy": 0.1,
+      "explanation": "Incremental encoders track changes (delta position); absolute encoders directly encode position at each spot."
+    }
+  ]
+}

@@ -1,0 +1,692 @@
+{
+  "summary": {
+    "student_id": "alice",
+    "play_count": 3,
+    "llm_routing": "gap_based",
+    "n_llm_actual": 5,
+    "n_bank_actual": 15,
+    "model": "runs/double_dqn_lstm/models/best_model.pt",
+    "algo": "double_dqn_lstm",
+    "n_questions": 20,
+    "initial_effective_ability": 42.809,
+    "final_effective_ability": 44.079,
+    "accuracy": 0.75,
+    "unique_questions": 20,
+    "repeated_questions": 0,
+    "topics_touched": [
+      "Measurement systems",
+      "Operational amplifier signal conditioning",
+      "Position and displacement sensors",
+      "Sensor errors and calibration"
+    ],
+    "suggested_learning_path": [
+      "Control systems",
+      "Sensor errors and calibration",
+      "Filtering",
+      "Operational amplifier signal conditioning",
+      "Analog-to-digital conversion",
+      "Sensors and transducers",
+      "Basic electronics",
+      "Open-loop and closed-loop control"
+    ]
+  },
+  "topic_report": {
+    "Sensors and transducers": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Basic electronics": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Operational amplifiers": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Open-loop and closed-loop control": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Number systems and digital coding": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Sensor characteristics and performance": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Logic gates and Boolean algebra": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Signal conditioning": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Control systems": {
+      "correct": 1,
+      "wrong": 0,
+      "attempts": 1,
+      "accuracy": 1.0,
+      "status": "developing"
+    },
+    "Measurement systems": {
+      "correct": 3,
+      "wrong": 0,
+      "attempts": 3,
+      "accuracy": 1.0,
+      "status": "strength"
+    },
+    "Position and displacement sensors": {
+      "correct": 7,
+      "wrong": 2,
+      "attempts": 9,
+      "accuracy": 0.7777777777777778,
+      "status": "strength"
+    },
+    "Temperature sensors": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Strain gauges": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Sensor errors and calibration": {
+      "correct": 8,
+      "wrong": 5,
+      "attempts": 13,
+      "accuracy": 0.6153846153846154,
+      "status": "developing"
+    },
+    "Filtering": {
+      "correct": 1,
+      "wrong": 0,
+      "attempts": 1,
+      "accuracy": 1.0,
+      "status": "developing"
+    },
+    "Operational amplifier signal conditioning": {
+      "correct": 8,
+      "wrong": 4,
+      "attempts": 12,
+      "accuracy": 0.6666666666666666,
+      "status": "developing"
+    },
+    "Analog-to-digital conversion": {
+      "correct": 1,
+      "wrong": 0,
+      "attempts": 1,
+      "accuracy": 1.0,
+      "status": "developing"
+    },
+    "Flip-flops and registers": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "System transfer functions": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Block diagram and signal flow": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Optical encoders": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Velocity and acceleration sensors": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Thermocouples": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Light and proximity sensors": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Data acquisition systems": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Digital input-output interfacing": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Counters and timers": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Microprocessor architecture": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Dynamic system response": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Frequency response": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Microcontroller interfacing": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Electrical actuation": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Hydraulic actuation": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Pneumatic actuation": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Stepper and servo drives": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Controllers": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Closed-loop dynamic response": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "PID control": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Closed-loop stability": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Programmable logic controllers": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Digital control": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Sequential and process control": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Fault diagnosis and safety logic": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Mechatronic system design": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Mechatronic system integration": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    }
+  },
+  "rows": [
+    {
+      "step": 0,
+      "selected_topic": "Sensor errors and calibration",
+      "question_id": "T13Q15",
+      "source": "bank",
+      "target_difficulty": 8.218,
+      "chosen_difficulty": 4.8,
+      "gap_ok": false,
+      "was_repeat": false,
+      "is_correct": true,
+      "time_taken": 72.65,
+      "time_ratio": 2.071,
+      "effective_ability_before": 42.8088,
+      "effective_ability_after": 43.06849236475777,
+      "running_accuracy": 1.0,
+      "explanation": "The correct answer is B because when we say a sensor has \u00b12% accuracy in its calibration certificate, it means that under specific conditions (calibration), about two-thirds of all measurements will be within \u00b12% of the true value. This aligns with the 68-95-99.7 rule for normal distribution, implying 68% of data points lie within one standard deviation (\u03c3) from the mean. The student's understanding reflects this concept correctly."
+    },
+    {
+      "step": 1,
+      "selected_topic": "Measurement systems",
+      "question_id": "T09Q7",
+      "source": "bank",
+      "target_difficulty": 8.318,
+      "chosen_difficulty": 8.5,
+      "gap_ok": true,
+      "was_repeat": false,
+      "is_correct": true,
+      "time_taken": 88.12,
+      "time_ratio": 1.549,
+      "effective_ability_before": 43.0685,
+      "effective_ability_after": 44.47546197118208,
+      "running_accuracy": 1.0,
+      "explanation": "The correct answer is B - \"The span of input values it can measure (min to max)\". Instruments have a range defined by their ability to measure from smallest to largest value within their design limits.\n\nB is right because:\n- Excerpt 1 says, \"The region between the limits within which an instrument is designed to operate for measuring/indicating a physical quantity is called the range of the instrument.\"\n- Option B aligns with this definition.\n\nOption A (minimum detectable input change) relates to sensitivity and not range. C is wrong as it only mentions maximum output voltage, ignoring the full measurable span. D (response time in milliseconds) doesn't match definitions given for range or any other concept discussed."
+    },
+    {
+      "step": 2,
+      "selected_topic": "Operational amplifier signal conditioning",
+      "question_id": "T15Q4",
+      "source": "bank",
+      "target_difficulty": 8.633,
+      "chosen_difficulty": 6.7,
+      "gap_ok": false,
+      "was_repeat": false,
+      "is_correct": true,
+      "time_taken": 30.84,
+      "time_ratio": 0.716,
+      "effective_ability_before": 44.4755,
+      "effective_ability_after": 45.10455854057155,
+      "running_accuracy": 1.0,
+      "explanation": "The correct answer is B because high source resistance unbalanced between inputs causes significant offset drift due to input bias currents. These biases flow through this imbalance, creating an error voltage. Options A and C are incorrect as they don't maximize the effect of input bias currents. D is unrelated to op-amp behavior. Misconception in B: Balancing helps but not with unbalanced source resistance which magnifies errors from imbalances like bias currents."
+    },
+    {
+      "step": 3,
+      "selected_topic": "Operational amplifier signal conditioning",
+      "question_id": "LLM_Operational_amplifie_096",
+      "source": "llm",
+      "target_difficulty": 9.693,
+      "chosen_difficulty": 9.69,
+      "gap_ok": true,
+      "was_repeat": false,
+      "is_correct": true,
+      "time_taken": 83.46,
+      "time_ratio": 2.278,
+      "effective_ability_before": 45.1046,
+      "effective_ability_after": 46.36599070628736,
+      "running_accuracy": 1.0,
+      "explanation": "The operational amplifier (op-amp) is specifically highlighted for its role in amplifying and conditioning electrical signals from sensors like thermocouples. It has a high gain and can amplify weak signals to suitable levels, often needing no additional circuitry. The text states it's the basis of many signal conditioning modules and widely used for amplification tasks, directly addressing how it processes such signals effectively.\n\nThe other options are incorrect because:\n- Optical amplifiers deal with light signals, not voltage changes from thermocouples.\n- Simple levers are mechanical devices that don't convert electrical signals; they might amplify but need further processing.\n- Fluid amplifiers work on pressure or flow transducers, not directly on small voltage signals like thermocouples.\n\nThus, the operational amplifier is uniquely suited for this role in signal conditioning."
+    },
+    {
+      "step": 4,
+      "selected_topic": "Sensor errors and calibration",
+      "question_id": "T13Q14",
+      "source": "bank",
+      "target_difficulty": 9.8,
+      "chosen_difficulty": 4.1,
+      "gap_ok": false,
+      "was_repeat": false,
+      "is_correct": false,
+      "time_taken": 26.39,
+      "time_ratio": 0.808,
+      "effective_ability_before": 46.366,
+      "effective_ability_after": 43.44052578345358,
+      "running_accuracy": 0.8,
+      "explanation": "The correct B answer uses Monte Carlo analysis by randomly sampling error distributions to simulate many outcomes, thus estimating total uncertainty effectively. A is incorrect as it only considers worst-case errors without accounting for variability and randomness inherent in sensor measurements. Misconception was ignoring the need for realistic modeling of uncertainties, which requires more comprehensive approaches like Monte Carlo simulations."
+    },
+    {
+      "step": 5,
+      "selected_topic": "Sensor errors and calibration",
+      "question_id": "LLM_Sensor_errors_and_ca_093",
+      "source": "llm",
+      "target_difficulty": 9.35,
+      "chosen_difficulty": 9.35,
+      "gap_ok": true,
+      "was_repeat": false,
+      "is_correct": true,
+      "time_taken": 129.14,
+      "time_ratio": 4.455,
+      "effective_ability_before": 43.4405,
+      "effective_ability_after": 44.84178325528034,
+      "running_accuracy": 0.8333,
+      "explanation": "The correct answer A is right because it uses statistical methods that minimize error across all data points, ensuring a comprehensive representation of non-linearity. This contrasts with option B, which ignores intermediate measurements and only considers extremes, leading to inaccuracies. Option C introduces external variables not specified in the problem, making it incorrect. Option D assumes linearity without data support, ignoring possible non-linear behavior.\n\nThe student was correct in choosing A because it aligns with methods like least squares fitting described in Bolton's text for accurately representing sensor errors using all available data points to find a straight line best fit through zero point error, providing an unbiased representation of how the output deviates from perfect linearity."
+    },
+    {
+      "step": 6,
+      "selected_topic": "Operational amplifier signal conditioning",
+      "question_id": "LLM_Operational_amplifie_094",
+      "source": "llm",
+      "target_difficulty": 9.45,
+      "chosen_difficulty": 9.45,
+      "gap_ok": true,
+      "was_repeat": false,
+      "is_correct": false,
+      "time_taken": 182.66,
+      "time_ratio": 4.985,
+      "effective_ability_before": 44.8418,
+      "effective_ability_after": 43.84172331392749,
+      "running_accuracy": 0.7143,
+      "explanation": "The correct answer is B: Using an operational amplifier to convert millivolt signals from thermocouples into more suitable digital inputs.\n\nThis scenario is right because:\n\n- Signal conditioning often involves amplifying weak signals, such as those from a thermocouple which can be only a few millivolts.\n- The amplified signal needs to be in the volts range for it to be compatible with the analog-to-digital converter (ADC) used by microprocessors.\n- Operational amplifiers are widely used for this purpose due to their high gain and integration on silicon chips.\n\nOption A is incorrect because Wheatstone bridges are typically used when you want to measure strain or resistance changes, not to condition signals from sensors directly. Options C and D can be wrong as well because they suggest simple solutions (connecting without conditioning) that ignore the need for signal strength adjustment, and using filters indiscriminately without context, which isn't correct practice in signal conditioning."
+    },
+    {
+      "step": 7,
+      "selected_topic": "Operational amplifier signal conditioning",
+      "question_id": "LLM_Operational_amplifie_084",
+      "source": "llm",
+      "target_difficulty": 8.4,
+      "chosen_difficulty": 8.4,
+      "gap_ok": true,
+      "was_repeat": false,
+      "is_correct": true,
+      "time_taken": 54.33,
+      "time_ratio": 1.483,
+      "effective_ability_before": 43.8417,
+      "effective_ability_after": 45.14851947746136,
+      "running_accuracy": 0.75,
+      "explanation": "The correct answer is C because operational amplifiers can eliminate mains frequency interference (mains noise) effectively using filters. However, they do not inherently reduce electrical noise as effectively without additional filtering. The student correctly identified this by stating that the amplifier alone may not reduce electrical noise, which aligns with the textbook's explanation of operational amplifiers being used for elimination and reduction in signal conditioning but not directly converting resistances to digital data."
+    },
+    {
+      "step": 8,
+      "selected_topic": "Operational amplifier signal conditioning",
+      "question_id": "LLM_Operational_amplifie_086",
+      "source": "llm",
+      "target_difficulty": 8.681,
+      "chosen_difficulty": 8.68,
+      "gap_ok": true,
+      "was_repeat": false,
+      "is_correct": true,
+      "time_taken": 77.08,
+      "time_ratio": 2.104,
+      "effective_ability_before": 45.1485,
+      "effective_ability_after": 46.12184501632575,
+      "running_accuracy": 0.7778,
+      "explanation": "The correct answer is D (\"For converting a microprocessor output into analog form.\") because operational amplifiers are widely used for amplification, which can be applied to increasing an input signal level from a digital source like a microprocessor (often as a binary or pulse width modulated signal) to the required voltage range of an ADC. The other options do not align with typical use cases: A is about driving actuators directly; B is about noise reduction without altering amplitude, which isn't specific to amplification; C uses op-amps in Wheatstone bridge for strain gauges, which doesn't involve converting digital signals into analog. The student was correct in identifying D as the right choice."
+    },
+    {
+      "step": 9,
+      "selected_topic": "Position and displacement sensors",
+      "question_id": "T10Q7",
+      "source": "bank",
+      "target_difficulty": 8.843,
+      "chosen_difficulty": 8.5,
+      "gap_ok": true,
+      "was_repeat": false,
+      "is_correct": false,
+      "time_taken": 140.98,
+      "time_ratio": 2.484,
+      "effective_ability_before": 46.1218,
+      "effective_ability_after": 44.617157915417344,
+      "running_accuracy": 0.7,
+      "explanation": "The correct answer is B (\"Approximately zero (midpoint core position)\"). In an LVDT, when the magnetic core is at its central or \"null\" position, there's no net change in magnetic flux between the primary and secondary coils due to symmetry. This results in equal but opposite e.m.f.s induced in the two secondary coils, canceling each other out, thus producing a zero output voltage. Options A (minimum), C (maximum) and D (supply voltage) are incorrect because they don't reflect the LVDT's operation at its null position where core is centered between the primary and secondary windings."
+    },
+    {
+      "step": 10,
+      "selected_topic": "Position and displacement sensors",
+      "question_id": "T10Q6",
+      "source": "bank",
+      "target_difficulty": 7.948,
+      "chosen_difficulty": 7.9,
+      "gap_ok": true,
+      "was_repeat": false,
+      "is_correct": true,
+      "time_taken": 28.32,
+      "time_ratio": 0.548,
+      "effective_ability_before": 44.6172,
+      "effective_ability_after": 45.651743780501135,
+      "running_accuracy": 0.7273,
+      "explanation": "The correct answer is B because LVDTs use a moving core that operates without direct contact, which allows for non-intrusive measurement. This ensures high linearity, typically around {0.25%, making it ideal for precise displacement measurements. Option A is incorrect as cost isn't discussed; C is false since LVDTs output analog voltages not digital signals directly; D is wrong as all sensors have limitations and can fail at extreme temperatures or under harsh conditions."
+    },
+    {
+      "step": 11,
+      "selected_topic": "Position and displacement sensors",
+      "question_id": "T10Q8",
+      "source": "bank",
+      "target_difficulty": 8.556,
+      "chosen_difficulty": 9.2,
+      "gap_ok": true,
+      "was_repeat": false,
+      "is_correct": true,
+      "time_taken": 241.66,
+      "time_ratio": 3.613,
+      "effective_ability_before": 45.6517,
+      "effective_ability_after": 46.51909934197308,
+      "running_accuracy": 0.75,
+      "explanation": "The correct answer is B because a draw-wire displacement sensor uses a retractable wire attached to a rotating potentiometer on a spring pulley system. The wire moves as the object displaces, and this movement rotates a potentiometer which then converts electrical potential differences into signals.\n\nOption A is incorrect. Piezoelectric elements are not typically used in draw-wire sensors for linear motion measurement.\n\nOption C is wrong because capacitive change is a method but not the primary one employed by draw-wire sensors as described here.\n\nOption D about magnetic flux density being used is misleading and incorrect, as this technology involves changes in capacitance or potential differences."
+    },
+    {
+      "step": 12,
+      "selected_topic": "Position and displacement sensors",
+      "question_id": "T10Q5",
+      "source": "bank",
+      "target_difficulty": 8.724,
+      "chosen_difficulty": 7.3,
+      "gap_ok": false,
+      "was_repeat": false,
+      "is_correct": true,
+      "time_taken": 65.99,
+      "time_ratio": 1.448,
+      "effective_ability_before": 46.5191,
+      "effective_ability_after": 46.909541367142744,
+      "running_accuracy": 0.7692,
+      "explanation": "The correct answer A is right because optical encoders have no moving parts in contact with the object being measured (like a shaft or disc), which prevents wear from friction. This contrasts with mechanical encoders, which often use rotating shafts and gears that can wear over time. Mechanical encoders also require regular maintenance to replace worn parts, unlike optical ones which don't have such issues. The student's answer highlights the main benefit of optical encoders correctly, so no misconceptions need clarifying about why A is right but not the other options."
+    },
+    {
+      "step": 13,
+      "selected_topic": "Position and displacement sensors",
+      "question_id": "T10Q4",
+      "source": "bank",
+      "target_difficulty": 9.267,
+      "chosen_difficulty": 6.7,
+      "gap_ok": false,
+      "was_repeat": false,
+      "is_correct": true,
+      "time_taken": 47.99,
+      "time_ratio": 1.115,
+      "effective_ability_before": 46.9095,
+      "effective_ability_after": 47.16729192034541,
+      "running_accuracy": 0.7857,
+      "explanation": "The correct answer is B because an LVDT output is an AC signal with a phase shift that depends on core displacement direction (positive or negative). A phase-sensitive demodulator extracts this phase information, turning AC into DC based on the timing of zero crossings. The low-pass filter removes remaining noise and AC components, leaving only the desired DC component with correct sign. Options like half-wave rectification don't account for AC phase shift or lack directionality. XOR gates and comparators can't extract displacement information from an LVDT signal correctly."
+    },
+    {
+      "step": 14,
+      "selected_topic": "Position and displacement sensors",
+      "question_id": "T10Q3",
+      "source": "bank",
+      "target_difficulty": 9.8,
+      "chosen_difficulty": 6.0,
+      "gap_ok": false,
+      "was_repeat": false,
+      "is_correct": true,
+      "time_taken": 31.56,
+      "time_ratio": 0.8,
+      "effective_ability_before": 47.1673,
+      "effective_ability_after": 47.33114229954539,
+      "running_accuracy": 0.8,
+      "explanation": "Correct: The capacitive displacement sensor's capacitance increases when plate separation decreases because C = \u03b5A/d where d is distance between plates. Decreasing d makes d smaller in the denominator, thus increasing overall capacitance.\n\nIncorrect answer B: If plate separation increased (decreased d), capacitance would decrease as it's inversely proportional to plate separation. The student misunderstood this principle of capacitive sensors."
+    },
+    {
+      "step": 15,
+      "selected_topic": "Sensor errors and calibration",
+      "question_id": "T13Q13",
+      "source": "bank",
+      "target_difficulty": 9.8,
+      "chosen_difficulty": 3.5,
+      "gap_ok": false,
+      "was_repeat": false,
+      "is_correct": true,
+      "time_taken": 37.65,
+      "time_ratio": 1.299,
+      "effective_ability_before": 47.3311,
+      "effective_ability_after": 47.36415085727772,
+      "running_accuracy": 0.8125,
+      "explanation": "The correct answer is B (\"Relationship between constant input and steady-state output\") because static calibration measures how a sensor behaves with stable inputs over time, focusing on its consistency rather than changes or variations. The excerpts highlight that static characteristics include aspects like accuracy, sensitivity, drift, dead zone which are tested under conditions of no significant change in the system - essentially measuring a sensor's performance with constant input leading to steady-state output readings.\n\nThe other options are wrong:\nA is incorrect because it misinterprets dynamic signals (changes over time).\nC is irrelevant as frequency response isn't discussed.\nD has nothing to do with calibration, which deals with static properties."
+    },
+    {
+      "step": 16,
+      "selected_topic": "Sensor errors and calibration",
+      "question_id": "T13Q12",
+      "source": "bank",
+      "target_difficulty": 9.8,
+      "chosen_difficulty": 2.9,
+      "gap_ok": false,
+      "was_repeat": false,
+      "is_correct": false,
+      "time_taken": 44.64,
+      "time_ratio": 1.67,
+      "effective_ability_before": 47.3642,
+      "effective_ability_after": 44.641435254800264,
+      "running_accuracy": 0.7647,
+      "explanation": "The correct answer is A (\"The sensor response is linear across the entire operating range\"). The text states that for a two-point calibration to be sufficient, the sensor's response must be linear over its full range. This means only two points are needed if they cover the entire linearity of the sensor without needing interpolation between those points due to non-linearity.\n\nThe student chose B because it implied only two measurements are necessary regardless of the sensor\u2019s behavior, which is incorrect. The text emphasizes the importance of a linear response for effective two-point calibration."
+    },
+    {
+      "step": 17,
+      "selected_topic": "Measurement systems",
+      "question_id": "T09Q8",
+      "source": "bank",
+      "target_difficulty": 9.149,
+      "chosen_difficulty": 9.2,
+      "gap_ok": true,
+      "was_repeat": false,
+      "is_correct": true,
+      "time_taken": 51.13,
+      "time_ratio": 0.763,
+      "effective_ability_before": 44.6414,
+      "effective_ability_after": 46.16113823563208,
+      "running_accuracy": 0.7778,
+      "explanation": "The correct answer is A because static calibration deals with constant inputs to measure stable parameters without varying responses, while dynamic calibration uses varied inputs to assess how a system reacts over time, testing frequency response and sensitivity to changes.\n\nOption B is incorrect as accuracy isn't directly linked to being more or less accurate. C is false since dynamic calibration is crucial for many systems' performance assessment. D is wrong because static and dynamic have distinct methods, not the same procedures."
+    },
+    {
+      "step": 18,
+      "selected_topic": "Position and displacement sensors",
+      "question_id": "T10Q2",
+      "source": "bank",
+      "target_difficulty": 9.682,
+      "chosen_difficulty": 5.4,
+      "gap_ok": false,
+      "was_repeat": false,
+      "is_correct": false,
+      "time_taken": 86.45,
+      "time_ratio": 2.278,
+      "effective_ability_before": 46.1611,
+      "effective_ability_after": 43.822255837096364,
+      "running_accuracy": 0.7368,
+      "explanation": "The correct answer is B because LVDTs operate with AC voltages whose amplitude depends on core displacement. The output voltage varies sinusoidally and its peak value increases as the core moves further away from the center, indicating direction through positive or negative peaks relative to a reference point. Option A is wrong as it talks about temperature, not displacement. Option C is incorrect for LVDTs which don't produce digital pulses. Option D is false because the output voltage changes continuously with core position, not remaining constant. The student mistook an LVDT's behavior for that of a potentiometer or proximity sensor."
+    },
+    {
+      "step": 19,
+      "selected_topic": "Position and displacement sensors",
+      "question_id": "T10Q15",
+      "source": "bank",
+      "target_difficulty": 8.849,
+      "chosen_difficulty": 4.8,
+      "gap_ok": false,
+      "was_repeat": false,
+      "is_correct": true,
+      "time_taken": 41.46,
+      "time_ratio": 1.172,
+      "effective_ability_before": 43.8223,
+      "effective_ability_after": 44.07872701299608,
+      "running_accuracy": 0.75,
+      "explanation": "The correct answer is B because redundancy ensures faults are detected (the system can still function if one sensor fails). It also allows for averaging of readings from multiple sensors to improve accuracy through weighted averaging, reducing noise and increasing precision. Option A is wrong as redundancy doesn't increase cost unnecessarily. Option C is incorrect since redundancy does not slow down the measurement; in fact, it often speeds up response time by having backups. Option D is false because calibration remains necessary despite redundancy.\n\nThe student's answer correctly identifies these benefits of redundancy for position and displacement sensors based on textbook information provided."
+    }
+  ]
+}

@@ -1,0 +1,435 @@
+{
+  "summary": {
+    "student_id": "finaltest",
+    "play_count": 1,
+    "llm_routing": "gap_based",
+    "n_llm_actual": 0,
+    "n_bank_actual": 5,
+    "model": "runs/recurrent_ppo/best_model.zip",
+    "algo": "recurrent_ppo",
+    "n_questions": 5,
+    "initial_effective_ability": 32.0,
+    "final_effective_ability": 33.16,
+    "accuracy": 0.6,
+    "unique_questions": 5,
+    "repeated_questions": 0,
+    "topics_touched": [
+      "Measurement systems",
+      "Operational amplifier signal conditioning"
+    ],
+    "suggested_learning_path": [
+      "Measurement systems",
+      "Operational amplifier signal conditioning",
+      "Sensors and transducers",
+      "Basic electronics",
+      "Open-loop and closed-loop control",
+      "Number systems and digital coding",
+      "Sensor characteristics and performance",
+      "Operational amplifiers"
+    ]
+  },
+  "topic_report": {
+    "Sensors and transducers": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Basic electronics": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Operational amplifiers": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Open-loop and closed-loop control": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Number systems and digital coding": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Sensor characteristics and performance": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Logic gates and Boolean algebra": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Signal conditioning": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Control systems": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Measurement systems": {
+      "correct": 2,
+      "wrong": 1,
+      "attempts": 3,
+      "accuracy": 0.6666666666666666,
+      "status": "developing"
+    },
+    "Position and displacement sensors": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Temperature sensors": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Strain gauges": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Sensor errors and calibration": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Filtering": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Operational amplifier signal conditioning": {
+      "correct": 1,
+      "wrong": 1,
+      "attempts": 2,
+      "accuracy": 0.5,
+      "status": "needs_improvement"
+    },
+    "Analog-to-digital conversion": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Flip-flops and registers": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "System transfer functions": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Block diagram and signal flow": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Optical encoders": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Velocity and acceleration sensors": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Thermocouples": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Light and proximity sensors": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Data acquisition systems": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Digital input-output interfacing": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Counters and timers": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Microprocessor architecture": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Dynamic system response": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Frequency response": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Microcontroller interfacing": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Electrical actuation": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Hydraulic actuation": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Pneumatic actuation": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Stepper and servo drives": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Controllers": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Closed-loop dynamic response": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "PID control": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Closed-loop stability": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Programmable logic controllers": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Digital control": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Sequential and process control": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Fault diagnosis and safety logic": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Mechatronic system design": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    },
+    "Mechatronic system integration": {
+      "correct": 0,
+      "wrong": 0,
+      "attempts": 0,
+      "accuracy": null,
+      "status": "unseen"
+    }
+  },
+  "rows": [
+    {
+      "step": 0,
+      "selected_topic": "Measurement systems",
+      "question_id": "T09Q3",
+      "source": "bank",
+      "target_difficulty": 5.84,
+      "chosen_difficulty": 6.0,
+      "gap_ok": true,
+      "was_repeat": false,
+      "is_correct": false,
+      "time_taken": 85.76,
+      "time_ratio": 2.145,
+      "effective_ability_before": 32.0,
+      "effective_ability_after": 30.661808425664642,
+      "running_accuracy": 0.0,
+      "explanation": "The correct answer is B (\"A systematic interfering/modifying error\"). According to Excerpt 1, loading occurs when the connection of one element to another modifies the characteristics of the preceding element, such as changing the voltage being measured. This is a systematic error because it consistently affects the measurement, modifying the voltage being measured. The student's incorrect answer A (\"A random error\") might arise from a misunderstanding of the term \"random error\", which refers to errors due to external factors like temperature or magnetic fields (Excerpt 5). However, loading error is a systematic issue caused by the interaction between measurement system components."
+    },
+    {
+      "step": 1,
+      "selected_topic": "Measurement systems",
+      "question_id": "T09Q15",
+      "source": "bank",
+      "target_difficulty": 5.047,
+      "chosen_difficulty": 4.8,
+      "gap_ok": true,
+      "was_repeat": false,
+      "is_correct": true,
+      "time_taken": 52.14,
+      "time_ratio": 1.476,
+      "effective_ability_before": 30.6618,
+      "effective_ability_after": 31.684828211840063,
+      "running_accuracy": 0.5,
+      "explanation": "The correct answer is B (\"At least 3:1 (ideally 4:1 or better) for valid traceability\"). This is because, according to the metrological chain, the accuracy of the reference standard should be higher than that of the device-under-test to ensure valid traceability (Excerpt 5 - Rajput, p.572). This is not explicitly stated, but the text implies that a higher grade standard should be used for the reference standard. The student's answer B is correct as it reflects this implication."
+    },
+    {
+      "step": 2,
+      "selected_topic": "Measurement systems",
+      "question_id": "T09Q2",
+      "source": "bank",
+      "target_difficulty": 5.33,
+      "chosen_difficulty": 5.4,
+      "gap_ok": true,
+      "was_repeat": false,
+      "is_correct": true,
+      "time_taken": 29.08,
+      "time_ratio": 0.771,
+      "effective_ability_before": 31.6848,
+      "effective_ability_after": 32.960557667136435,
+      "running_accuracy": 0.6667,
+      "explanation": "The correct answer is B. \"Accuracy\" refers to the closeness to the true value, as it is the measure of how close the measured value is to the actual value. This is not explicitly mentioned in the given excerpts, but it is a fundamental concept in measurement systems. \"Precision\", on the other hand, refers to the repeatability of readings, or the consistency of the measurement system. This is supported by Excerpt 2, which discusses the nature of measurement required, including the accuracy and reliability required. The student's answer, B, correctly identifies the difference between accuracy and precision."
+    },
+    {
+      "step": 3,
+      "selected_topic": "Operational amplifier signal conditioning",
+      "question_id": "T15Q3",
+      "source": "bank",
+      "target_difficulty": 6.123,
+      "chosen_difficulty": 6.0,
+      "gap_ok": true,
+      "was_repeat": false,
+      "is_correct": true,
+      "time_taken": 36.22,
+      "time_ratio": 0.914,
+      "effective_ability_before": 32.9606,
+      "effective_ability_after": 34.35642551941274,
+      "running_accuracy": 0.75,
+      "explanation": "A CMRR of 80 dB is equivalent to a CMRR of 10,000 (as per Excerpt 2). This means that the common-mode error is 10,000 times smaller than the differential gain. Given that the differential gain is 10 and the common-mode input is 1 V, the common-mode error is 1 V / 10,000 = 0.0001 V or 0.1 mV. However, the student was actually correct, but the answer is not explicitly found in the excerpts. The error referred to the output is indeed 1 mV, as the differential gain is 10 (Excerpt 4)."
+    },
+    {
+      "step": 4,
+      "selected_topic": "Operational amplifier signal conditioning",
+      "question_id": "T15Q5",
+      "source": "bank",
+      "target_difficulty": 7.2,
+      "chosen_difficulty": 7.3,
+      "gap_ok": true,
+      "was_repeat": false,
+      "is_correct": false,
+      "time_taken": 41.01,
+      "time_ratio": 0.896,
+      "effective_ability_before": 34.3564,
+      "effective_ability_after": 33.159664775351686,
+      "running_accuracy": 0.6,
+      "explanation": "The main function of an op-amp in signal conditioning is to amplify, filter, and condition analog sensor signals for processing (Option A). According to Excerpt 1, signal conditioning involves \"getting the signal into the right type of signal\" and \"getting the level of the signal right,\" which is achieved through the use of op-amps. In Excerpt 4, an inverting op-amp circuit is used as a current-to-voltage converter, demonstrating its ability to condition sensor signals. The student's incorrect answer (B) suggests replacing the sensor, which is not the primary function of an op-amp in signal conditioning."
+    }
+  ]
+}

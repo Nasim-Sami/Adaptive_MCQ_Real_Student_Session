@@ -8,34 +8,6 @@ app_port: 7860
 pinned: false
 ---
 
-# 🎓 Adaptive MCQ Learning System with RL & LLM
-
-An intelligent tutoring system that uses **Reinforcement Learning (RL)** and **Large Language Models (LLM)** to adaptively personalize multiple-choice question (MCQ) learning sessions for mechatronics education.
-
-## 🌟 Key Features
-
-- **Adaptive Difficulty**: Uses delta-driven difficulty control to select questions matched to the student's current ability level
-- **LLM-Enhanced Explanations**: Groq API integration for grounded, contextual explanations of answers
-- **Memory-Equipped RL Agents**: Three recurrent (LSTM-based) agents trained with on/off-policy algorithms:
-  - RecurrentPPO (Stable-Baselines3)
-  - A2C + LSTM (from-scratch)
-  - Double DQN + LSTM / DRQN (from-scratch)
-- **Cross-Session Learning**: Student history persists ability and question coverage across sessions
-- **Curriculum Aware**: Learns optimal topic sequencing using coverage carryover and anti-massing strategies
-- **XAI/Interpretability**: Explains which topics the agent picks and why (occlusion-based counterfactuals)
-- **Grounded Question Generation**: Falls back to LLM-generated MCQs when the question bank gap is too large
-- **PDF-Based Content**: Embeddings from Ollama (`nomic-embed-text`), retrieval-augmented context for explanations
-
-## 📊 What This System Does
-
-1. **Topics & Questions**: 45 topics × 15 questions per topic = 675 pre-curated MCQs in a structured bank
-2. **Student Simulation**: Models realistic student behavior (forgetting, spacing effects, learning styles)
-3. **RL Training**: Trains agents to pick topics that maximize cumulative learning (true mastery) over many sessions
-4. **Real Sessions**: Runs interactive or simulated student sessions, tracking ability changes and topic mastery
-5. **Evaluation**: Compares trained agents against baselines (random, heuristics, oracle) on standardized metrics
-
----
-
 # LLM-Enhanced Adaptive Mechatronics — v2.4
 
 Topic-selection RL system (the agent picks a *topic*; a rule serves the
@@ -165,63 +137,6 @@ hidden state that produced the real choice.
 
 ---
 
-## 📂 Project Structure
-
-```
-Student_SessionLSTM_Based_RL_&_grok_api/
-├── Core Learning System
-│   ├── app.py                         # Flask web UI for real sessions
-│   ├── mcq_env.py                     # RL environment (gym-compatible)
-│   ├── student_simulator.py           # Simulates realistic student behavior
-│   ├── question_bank.py               # 675-question bank loader
-│   └── curriculum.py                  # Topic sequencing logic
-│
-├── RL Training (5 algorithms)
-│   ├── train_recurrent_ppo.py         # SB3 RecurrentPPO trainer
-│   ├── train_a2c_lstm.py              # Custom A2C + LSTM
-│   ├── train_double_dqn_lstm.py       # Custom DRQN trainer
-│   ├── train_a2c.py                   # Legacy A2C (memoryless)
-│   ├── train_double_dqn.py            # Legacy Double DQN (memoryless)
-│   └── rl_common.py                   # Shared nets, buffers, utilities
-│
-├── Real Session & XAI
-│   ├── run_real_student_session.py    # Interactive/simulated session runner
-│   ├── session_xai.py                 # Explainability: topic scores, occlusion
-│   ├── session_ability.py             # Elo-style ability tracking
-│   └── explain_answer.py              # LLM-grounded explanations
-│
-├── Question Selection & Generation
-│   ├── question_selector.py           # Gap-based routing: bank vs. LLM
-│   ├── question_generator.py          # LLM-based MCQ generation
-│   ├── question_source_router.py      # Deprecated (replaced by selector)
-│   └── _qbank_part{1-5}_expanded.py  # 675 pre-curated questions
-│
-├── LLM & Embeddings
-│   ├── llm_client.py                  # Groq API wrapper (generation)
-│   ├── retriever.py                   # Ollama embeddings (retrieval)
-│   └── pdf_ingest.py                  # PDF ingestion + OCR fallback
-│
-├── Evaluation & Diagnostics
-│   ├── evaluate_baselines.py          # Baseline scoreboard (random/heuristics)
-│   ├── final_scoreboard.py            # RecurrentPPO vs. baselines
-│   ├── analyze_mimicry.py             # Behavioral check: agent mimics heuristic?
-│   └── diagnose_np.py                 # Torch-free model diagnostics
-│
-├── Data & Config
-│   ├── data/                          # Student history & session logs
-│   ├── models/                        # Pre-trained checkpoints
-│   ├── runs/                          # Training outputs (logs, checkpoints)
-│   ├── pdf_chunks.json                # Ingested PDF chunks
-│   ├── pdf_embeddings.npy             # Embedding cache (~270 MB)
-│   └── requirements.txt               # Python dependencies
-│
-└── Web UI (Flask)
-    ├── templates/                     # HTML: index, play, result, XAI panel
-    └── static/                        # CSS, JavaScript
-```
-
----
-
 ## LLM routing — gap-based
 
 The old play-count schedule (`play 1 → 5%, play 2 → 10%, …`) has been
@@ -262,30 +177,6 @@ The old format (`{"alice": 3}`) is auto-migrated on first load.
 **Ability persistence:** a returning student always resumes from their last
 session's final ability. A new student starts at a random ability in
 `[15, 20]` (or `[26, 34]` for the v2.1+ rebased 10–50 scale).
-
----
-
-## 🚀 Quick Start
-
-```bash
-# 1. Install dependencies
-pip install -r requirements.txt
-
-# 2. Set up Groq API (free tier available)
-export GROQ_API_KEY="gsk_your_key_here"
-
-# 3. Build embeddings cache (one-time, ~270 MB)
-python retriever.py --build
-
-# 4. Run an interactive session with a pre-trained model
-python run_real_student_session.py \
-    --model runs/double_dqn_lstm/models/best_model.pt \
-    --student-id alice
-
-# Answer A/B/C/D at each prompt. Watch the system adapt difficulty in real-time!
-```
-
-See [Full Installation & Training](#prerequisites-one-time-setup) and [Running Sessions](#running-a-real-student-session) sections for detailed guides.
 
 ---
 

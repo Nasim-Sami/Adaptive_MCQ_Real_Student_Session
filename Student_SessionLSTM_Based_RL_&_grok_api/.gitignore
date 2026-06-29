@@ -1,40 +1,56 @@
 # Python cache
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
+*.pyc
+*.pyo
+*.pyd
 .Python
-env/
+
+# Virtual environments
 venv/
+env/
 ENV/
 
-# Project-specific
-.env
-.env.local
-*.pt
-*.pth
-models/
-
 # IDE
+.claude/
 .vscode/
 .idea/
-*.swp
-*.swo
-*~
 
 # OS
 .DS_Store
 Thumbs.db
 
-# Logs & temp
-logs/
-runs/*
-!runs/double_dqn_lstm/
-!runs/double_dqn_lstm/models/
-!runs/double_dqn_lstm/models/best_model.pt
-*.log
-Adaptive_mcq_RL-LSTM-LLM_based/
+# Environment
+.env
+.env.local
 
-# Local tooling / data
-.claude/
-data/*.db
+# Large PDFs (source material, not needed for app)
+*.pdf
+
+# Training scripts (not needed for inference)
+train_*.py
+evaluate_baselines.py
+diagnose_np.py
+fix_option_balance.py
+test.py
+pdf_ingest.py
+
+# Training logs
+runs_*.log
+
+# Unused model checkpoints (keep only double_dqn_lstm)
+runs/a2c_lstm/
+runs/recurrent_ppo/
+
+# Test data
+real_student_sessions/
+student_history.json
+PLAN.md
+
+# Database (will be created at runtime)
+data/student_sessions.db
+
+# Development files
+.pytest_cache/
+*.egg-info/
+dist/
+build/
